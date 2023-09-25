@@ -18,9 +18,10 @@ const Category = ({ category, products, slug }) => {
     `/api/products?populate=*&[filters][categories][slug][$eq]=${slug}&pagination[page]=${pageIndex}&pagination[pageSize]=${maxResult}`,
     fetchDataFromApi,
     {
-        fallbackData: products,
+      fallbackData: products,
     }
-);
+  );
+
   return (
     <div className="w-full md:py-20 relative">
       <Wrapper>
